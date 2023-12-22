@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="chat-container">
+    <div class="chat-header">
+      Chat with <strong style="color: #FFD90F;">Cletus</strong>
+    </div>
+    <div class="chat-messages">
+      {% for i in full_conversation %}
+        <div class="message bot-message">
+          <strong class="text-alert">You:</strong>{{ full_conversation[i][0] }}
+        </div>
+        <div class="message user-message">
+          <strong class="text-alert">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-6">
+                  <div class="rounded-circle overflow-hidden mx-auto d-block border border-dark" style="width: 100px; height: 100px;">
+                    <img src="{{ random_images[i] }}" alt="Your Image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+
+            Cletus:
+          </strong>{{ full_conversation[i][1] }}
+        </div>
+      {% endfor %}
+    </div>
+    <form method="post" onsubmit="loading()">
+      <div class="chat-input">
+        <div class="input-group">
+          <input type="text" class="form-control" name="user_input" placeholder="Type your message..." required />
+          <button class="btn btn-primary" type="submit">Send</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-message">
+      <div class="spinner-border" role="status">
+        <span class="sr-only"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function loading() {
+      document.getElementById('loadingOverlay').style.display = 'flex'
+    }
+  </script>
+
+  {% if error != False %}
+    <div class="error-overlay" id="errorOverlay">
+      <div class="error-message">
+        <h3>Error</h3>
+        <p>{{ error }}</p>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('errorOverlay').style.display = 'flex'
+    </script>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="custom-box">
+    <div class="container mt-5" style="z-index: 1000;position: absolute;top: 20%;">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <div class="rounded-circle overflow-hidden mx-auto d-block border border-dark" style="width: 150px; height: 150px;">
+            <img src="https://i.pinimg.com/originals/9a/98/d3/9a98d338542d73244b14fb9f596a9b2d.png" alt="Your Image" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>ChatGPT</h2>
+    <h4>Talk with <strong style="color: #FFD90F;">Cletus</strong></h4>
+    <form method="post">
+      <div class="mb-3">
+        <label for="apiKey" class="form-label">API Key</label>
+        <input type="text" class="form-control" id="apiKey" name="apiKey" placeholder="Enter your API key" required />
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+      {% if error != False %}
+        <div class="error-box" id="errorBox">{{ error }}</div>
+      {% endif %}
+    </form>
+  </div>
+{% endblock %}
