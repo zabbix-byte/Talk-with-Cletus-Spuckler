@@ -13,3 +13,4 @@ This application serves as a small project designed to evaluate the capabilities
     - Edit `meta.json` and delete the token key
 2. How to delete conversation.
     - Edit `meta.json` and replace all with an empty dict `{}`
+3. How to run the app, install `requirements.txt` and lauch `chatgpt-pypulse.py`
