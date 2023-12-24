@@ -4,7 +4,7 @@ The Cletus Spuckler ChatGPT with Memory desktop application is a delightful and 
 This application serves as a small project designed to evaluate the capabilities of the PyPulse framework.
 <div align="center">
 <img src="https://github.com/zabbix-byte/Talk-with-Cletus-Spuckler/assets/67012651/9d840561-7d41-41fb-b54c-121c5f26cfac" width="300px">
-<img src="https://github.com/zabbix-byte/Talk-with-Cletus-Spuckler/assets/67012651/0f2e1fd1-9d2b-4dba-9e3c-0ed6a25e1811" width="300px">
+<img src="https://github.com/zabbix-byte/Talk-with-Cletus-Spuckler/assets/67012651/88c35843-a5e1-417b-8f70-68a37588916a" width="300px">
 </div>
 
 ### 🤠 Description
