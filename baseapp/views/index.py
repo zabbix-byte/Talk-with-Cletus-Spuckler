@@ -51,10 +51,20 @@ def index(request):
             )
         params["user"]["role"] = "user"
         params["user"]["content"] = body.get("user_input")
-
+        
+        last_conversation_user = [{"role": "user", "content": i} for i in user_conversation]
+        last_conversation_assistant = [{"role": "assistant", "content": i} for i in ia_conversation]
+        
+        last_conversation = [[user, ia] for user, ia in zip(last_conversation_user, last_conversation_assistant)]
+        
+        last_conversation_formatted = []
+        for i in last_conversation:
+            for y in i:
+                last_conversation_formatted.append(y)
+        
         query = {
             "model": params["config"]["model"],
-            "messages": [params["ia"], params["user"]],
+            "messages": [params["ia"], *last_conversation_formatted, params["user"]],
         }
 
         action = ChatGpt.body(query)
