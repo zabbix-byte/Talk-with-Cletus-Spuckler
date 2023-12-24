@@ -4,7 +4,7 @@ This application serves as a small project designed to evaluate the capabilities
 
 <div align="center">
 <img src="https://github.com/zabbix-byte/Talk-with-Cletus-Spuckler/assets/67012651/9d840561-7d41-41fb-b54c-121c5f26cfac" width="300px">
-<img src="https://github.com/zabbix-byte/Talk-with-Cletus-Spuckler/assets/67012651/a7da2c02-4223-4083-936c-e12675521af1" width="300px">
+<img src="https://github.com/zabbix-byte/Talk-with-Cletus-Spuckler/assets/67012651/0f2e1fd1-9d2b-4dba-9e3c-0ed6a25e1811" width="300px">
 </div>
 
 ### Useful tips
